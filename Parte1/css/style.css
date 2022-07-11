@@ -19,4 +19,11 @@ span {
 } 
 footer{
     margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.container{
+    display: flex;
+    flex-direction: column-reverse;
 }
