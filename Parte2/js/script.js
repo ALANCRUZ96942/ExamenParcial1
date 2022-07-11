@@ -45,3 +45,16 @@
        Registra un evento de "click", para que cuando se de click en el botón, se muestren las propiedades de cada objeto en el input correspondiente. 
 
      */
+
+       let buttonMayusq = document.getElementById('btn_mayusculas');
+
+       function toMayusq(e){
+        e.preventDefault();
+        var names = document.getElementById('txt_may').value.split(',');
+        for (var i=0; i < names.length; i++) {
+          console.log(names[i] = names[i].toLowerCase());
+        } 
+        document.getElementById('txt_may').value = names;
+       }
+
+       buttonMayusq.addEventListener("click",toMayusq);
