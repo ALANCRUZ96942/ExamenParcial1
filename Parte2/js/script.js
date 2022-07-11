@@ -48,6 +48,9 @@
 
        let buttonMayusq = document.getElementById('btn_mayusculas');
       let  buttonAge = document.getElementById('btn_añoshumano');
+      let  btnMuestra = document.getElementById('btn_muestra');
+
+
        function toMayusq(e){
         e.preventDefault();
         var names = document.getElementById('txt_may').value.split(',');
@@ -64,6 +67,37 @@
         var dog_age = human_age*7;
         document.getElementById('edad_perro').value = dog_age;
        }
-       
+
+
+
+
+       function register (e){
+        e.preventDefault();
+
+        var Pokemon
+        function Pokemon (nombre,especie,atque,defensa){
+          this.nombre = nombre;
+          this.especie = especie;
+          this.atque = atque;
+          this.defensa = defensa;
+       }
+
+        var Pokemon1 = new Pokemon('Pikachu','Eléctrico',100,80);
+        var Pokemon2 = new Pokemon('Chikorita','Planta',80,55);
+
+       document.getElementById('nombre_poke1').value = Pokemon1.nombre ;
+       document.getElementById('especie_poke1').value =  Pokemon1.especie;
+       document.getElementById('ataque_poke1').value =  Pokemon1.atque;
+       document.getElementById('defensa_poke1').value =  Pokemon1.defensa;
+
+
+       document.getElementById('nombre_poke2').value = Pokemon2.nombre ;
+       document.getElementById('especie_poke2').value =  Pokemon2.especie;
+       document.getElementById('ataque_poke2').value =  Pokemon2.atque;
+       document.getElementById('defensa_poke2').value =  Pokemon2.defensa;
+
+       }
+
        buttonMayusq.addEventListener("click",toMayusq);       
        buttonAge.addEventListener("click",calculateDogAge);
+       btnMuestra.addEventListener("click",register);
