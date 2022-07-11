@@ -1,0 +1,22 @@
+body{
+    background-color: rgba(2, 110, 168, 0.627);
+}
+#img-main{
+    margin: 30px;
+    border: 5px double;
+}
+#cita{
+    font-size: 15px;
+}
+span {
+    font-weight: bold;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+} 
+footer{
+    margin-top: 50px;
+}
