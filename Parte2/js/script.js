@@ -47,7 +47,7 @@
      */
 
        let buttonMayusq = document.getElementById('btn_mayusculas');
-
+      let  buttonAge = document.getElementById('btn_añoshumano');
        function toMayusq(e){
         e.preventDefault();
         var names = document.getElementById('txt_may').value.split(',');
@@ -57,4 +57,13 @@
         document.getElementById('txt_may').value = names;
        }
 
-       buttonMayusq.addEventListener("click",toMayusq);
+
+       function calculateDogAge(e){
+        e.preventDefault();
+        var human_age = document.getElementById('edad_humano').value;
+        var dog_age = human_age*7;
+        document.getElementById('edad_perro').value = dog_age;
+       }
+       
+       buttonMayusq.addEventListener("click",toMayusq);       
+       buttonAge.addEventListener("click",calculateDogAge);
